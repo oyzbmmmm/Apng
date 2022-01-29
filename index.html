@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>检测apng</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>检测是否为apng</h1>
+
+        <p>
+            <button id="choose-btn" class="btn btn-primary">选择 APNG 文件</button>
+        </p>
+        <div class="container apng-error hidden">
+            <div class="alert alert-danger"></div>
+        </div>
+        <div class="container apng-result hidden">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>在canvas画布中显示</p>
+                    <div class="apng-ani"></div>
+                    <div>
+                        <button class="btn" id="play-pause-btn">开始 / 暂停</button>
+                        <button class="btn" id="stop-btn">停止</button> 速度控制 (<span id="playback-rate-display">1.0</span>)
+                        <input id="playback-rate" type="range" min="0.1" max="2.0" step="0.1" value="1.0">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <p> 输出当前帧信息: </p>
+                    <pre class="apng-log"></pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p> APNG 信息: </p>
+                    <pre class="apng-info"></pre>
+                </div>
+                <div class="col-md-8">
+                    <p>帧数</p>
+                    <p class="apng-frames"></p>
+                </div>
+            </div>
+        </div>
+        <p><a href="https://github.com/oyzbmmmm/Apng">相关</a></p>
+        <!-- 白嫖党，请保留此行或silencetime.com播客地址，耗子尾汁，好好反思 -->
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
